@@ -1,0 +1,1 @@
+ModLuaFileAppend("data/scripts/perks/perk.lua", "mods/first_temple_edit_wands_everywhere/ewefirst.lua")
