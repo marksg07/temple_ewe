@@ -69,8 +69,14 @@ function perk_get_spawn_order()
 
 		table.insert( result, perk_data.id )
 	end
+	-- MOD: move last perk to first perk; first perk is always skipped
+	table.insert( result, 1, table.remove( result ) )
 
-
+	for i, id in ipairs(result) do
+		if i < 10 then
+			print(tostring(i) .. ": " .. id)
+		end
+	end
 	-- debug - print duplicates
 	-- for i,id in ipairs(result) do
 	-- 	for i2,id2 in ipairs(result) do
